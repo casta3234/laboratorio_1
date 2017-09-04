@@ -22,13 +22,13 @@ public class Venta {
 
     public Venta(Producto producto, Vendedor vendedor, int cantidadVendida) {
 
-            this.producto = producto;
-            this.vendedor = vendedor;
-            this. cantidadVendida = cantidadVendida;
-            this.fecha = new Date();
-            this.valorVenta = (this.producto.getPrecioUnidad() * cantidadVendida);
-            imprimirFactura();
-        
+        this.producto = producto;
+        this.vendedor = vendedor;
+        this.cantidadVendida = cantidadVendida;
+        this.fecha = new Date();
+        this.valorVenta = (this.producto.getPrecioUnidad() * cantidadVendida);
+        imprimirFactura();
+
     }
 
     public void imprimirFactura() {
@@ -37,9 +37,8 @@ public class Venta {
         System.out.println("Vendedor: " + this.vendedor.getNombre() + " " + this.vendedor.getApellido()
                 + " ID: " + this.vendedor.getId());
         System.out.println("codigo del producto: " + this.producto.getCodigo() + " nombre del producto: " + this.producto.getDescripcion()
-                + " precio del product: " + this.producto.getPrecioUnidad() + " catidad vendida: " +  cantidadVendida
+                + " precio del product: " + this.producto.getPrecioUnidad() + " catidad vendida: " + cantidadVendida
                 + " valor total: " + this.valorVenta);
-
 
     }
 

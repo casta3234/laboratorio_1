@@ -11,20 +11,20 @@ package Ejercico_2_Entrevista;
  * Sebastian Castañeda Romero
  */
 public class Producto {
-    private int cantidad; 
+
+    private int cantidad;
     private int codigo;
     private String descripcion;
     private double precioUnidad;
-    private  int cantidadVendida; 
+    private int cantidadVendida;
 
-
-
-    public Producto( String descripcion, double precioUnidad ,int cantidad) {
+    public Producto(String descripcion, double precioUnidad, int cantidad) {
         this.descripcion = descripcion;
         this.precioUnidad = precioUnidad;
         this.cantidad = cantidad;
     }
-        public int getCantidadVendida() {
+
+    public int getCantidadVendida() {
         return cantidadVendida;
     }
 
@@ -48,19 +48,12 @@ public class Producto {
         return cantidad;
     }
 
-
-
     public String getDescripcion() {
         return descripcion;
     }
 
-   
-
     public double getPrecioUnidad() {
         return precioUnidad;
     }
-
-  
-
 
 }
