@@ -51,11 +51,12 @@ public class Ejercicio1 {
         while (op < 5) {
             System.out.println("Ingrese una opcion:");
             System.out.println("1. Ingrese un auto.");
+            System.out.println("2. Mostrar Ingresos.");
+            System.out.println("3. Mostrar Ubicacion");
 
             Scanner opcion = new Scanner(System.in);
             op = opcion.nextInt();
             System.out.println(op);
-
             switch (op) {
                 case 1:
                     //Creacion del auto
@@ -64,6 +65,10 @@ public class Ejercicio1 {
                     String pl = placa.next();
                     Robot p = new Robot(parq, 6, 8, Direction.WEST);
                     p.setLabel(pl);
+                    p.examineLights();
+                    p.examineThings();
+                    p.examineThings(IPredicate.aLight);
+                    p.examineRobots();
                     //Movimiento del auto
                     for (int x = 0; x <= 6; x++) {
                         p.move();
@@ -74,17 +79,11 @@ public class Ejercicio1 {
                         p.turnLeft();
                         p.turnLeft();
                         p.move();
-                        //p.pickThing();
+
                     }
                     while (p.canPickThing() == true) {
                         p.pickThing();
-                        //p.putThing();
-                        //if(p.countThingsInBackpack()== 1) {
-                        //p.putThing();
-                        //p.pickThing();
-                        //while (p.frontIsClear() == true) {
-                        if (p.frontIsClear() == false) {
-                            //if(p.)==false){
+                        if (p.frontIsClear() == true) {
                             p.putThing();
                             p.move();
 
@@ -93,11 +92,11 @@ public class Ejercicio1 {
 
                     break;
                 case 2:
-                    System.out.println("Hace 2");
+                    IIterate<Robot> cantauto = parq.examineRobots();
+                    System.out.println("Ingresaron " + cantauto);
                     break;
                 case 3:
-                    System.out.println("Hace 3");
-                    System.out.println(op);
+                    parq.getThingCountPredicate();
                     break;
                 case 4:
                     System.out.println("Hace 4");
