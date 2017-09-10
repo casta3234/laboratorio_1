@@ -30,7 +30,7 @@ public class Main {
         System.out.println("7.obtener el total de gastos desde el ultimo balance");
         System.out.println("8.obtener el balance ventas gastos");
         System.out.println("9.obtener el producto mas vendido");
-        System.out.println("10.obtener el valor a pagar a un empleado");
+        //System.out.println("10.obtener el valor a pagar a un empleado");
         while (true) {
             System.out.println("a que funcion desea acceder ");
             o = teclado.nextInt();
